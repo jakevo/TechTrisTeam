@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'https://github.com/jakevo/TechTrisTeam',
+    modulePrefix: 'tech-tris',
     environment,
     rootURL: '/',
     locationType: 'auto',
@@ -44,8 +44,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.locationType = 'hash';
-    ENV.rootURL = '/tech-tris/';
     // here you can enable a production-specific feature
   }
 
