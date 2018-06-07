@@ -1,0 +1,26 @@
+<div class="container">
+    <select onchange={{action "setSelection" value="target.value" }}>
+        <option value="All">All</option>
+        <option value="Dog">Dog Lovers</option>
+        <option value="Cat">Cat Lovers</option>
+        <option value="Rookie">Ember Rookie!</option>
+    </select>
+    {{#if userSelect}}
+        {{#each updateModel as |user|}}
+        <div class="jumbotron">
+            <h2>
+                <b>Name:</b> {{user.name}}</h2>
+            <h4>Started at ASH: {{user.dateStartedAtASH}}</h4>
+        </div>
+        {{/each}} 
+    {{else}} 
+        {{#each model as |user|}}
+        <div class="jumbotron">
+            <h2>
+                <b>Name:</b> {{user.name}}</h2>
+            <h4>Started at ASH: {{user.dateStartedAtASH}}</h4>
+        </div>
+        {{/each}} 
+    {{/if}}
+</div>
+{{outlet}}
